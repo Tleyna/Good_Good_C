@@ -1,13 +1,15 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main(void)
 {
-    int a, b, h;
-    scanf("%d,%d,%d",&a, &b, &h);
+    float x;
+    scanf("%f", &x);
 
-    // здесь продолжайте программу
-    float res = (((float)a + (float)b) * (float)h) / 2;
-    printf("%.1f\n", res);
+    bool res = (int)x  % 5  == 0;
+
+    printf("%d\n", res);
 
     return 0;
+
 }
