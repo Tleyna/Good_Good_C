@@ -2,10 +2,11 @@
 
 int main(void)
 {
-    float type, w, h;
-    scanf("%f %f %f", &type, &w, &h);
+    int a, b, c, res;
+    scanf("%d %d %d", &a, &b, &c);
 
-    type == 1 ? printf("%.1f\n", w * h) : (type == 2 ? printf("%.1f\n", 2 * (w + h)) : printf("-1\n"));
+    res = ((a + b > c) ? ((b + c > a) ? ((c + a > b) ? 1 : 0) : 0) : 0);
+    printf(res ? "yes" : "no");
 
     return 0;
 }
