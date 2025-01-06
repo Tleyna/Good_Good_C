@@ -3,18 +3,15 @@
 
 int main(void)
 {
-    double grad;
-    scanf("%lf", &grad);
+    int a, b;
+    scanf("%d, %d", &a, &b);
 
     // здесь продолжайте программу
-
+    double tan = (double)a / (double)b;
     double pi = 3.1415;
+    double rad = atan(tan);
 
-    double rad = grad * (pi / 180);
-
-    double res = sin(rad);
-
-    printf("%.1f", res);
+    printf("%.2f %.2f", tan, rad);
 
     return 0;
 }
