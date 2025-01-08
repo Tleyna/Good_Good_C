@@ -1,14 +1,24 @@
 #include <stdio.h>
+#include <math.h>
 
-#define MAX_BUFF_SIZE 1024
+// здесь объявляйте макро-функцию
+#define GIPOT(a,b) (sqrt(pow(a,2)+pow(b,2)))
 
 int main(void)
 {
-    int buff_size;
-    scanf("%d", &buff_size);
+    int a, b;
+    if(scanf("%d, %d", &a, &b) != 2) {
+        printf("Input error");
+        return 0;
+    }
 
-    int res = buff_size >= MAX_BUFF_SIZE ? MAX_BUFF_SIZE : buff_size;
-    printf("%d", res);
+    // здесь продолжайте программу
 
+    double length = GIPOT((a + 3),(b - 2));
+
+    printf("%.2f", length);
+
+
+    //__ASSERT_TESTS__ // макроопределение для тестирования (не убирать и должно идти непосредственно перед return 0)
     return 0;
 }
